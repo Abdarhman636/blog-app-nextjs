@@ -2,6 +2,7 @@
 import React from 'react'
 import Link from "next/link";
 import styles from './header.module.css'
+import DarkModeToggle from '../DarkModeToggle/DarkModeToggle';
 
 
 const links = [
@@ -44,6 +45,7 @@ const Header = () => {
       <Link className={styles.logo} href='/'>lamamia</Link>
 
       <div className={styles.links}>
+        <DarkModeToggle />
         {links.map((link) => (
           <Link className={styles.link} key={link.id} href={link.url}>{link.title}</Link>
         ))}
